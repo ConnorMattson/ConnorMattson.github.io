@@ -1,0 +1,11 @@
+about
+	Hi, I'm Connor Mattson. brief history/bio
+	education
+		graduated skc runner up dux
+		ccna
+		currently uoa conjoint BE(hons) in Engineering Science / BSc in Computer Science
+
+	awards
+		stuff
+
+	

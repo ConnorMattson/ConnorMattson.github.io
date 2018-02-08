@@ -1,0 +1,31 @@
+<!-- TODO add background video -->
+    <video playsinline autoplay muted poster="media/circuit-mockup.png" id="bgvid">
+      <!-- <source src="polina.webm" type="video/webm"> -->
+      <source src="media/test-export2.mp4" type="video/mp4">
+    </video>
+
+    <!-- Fades the background video out once it has finished playing -->
+    <script>
+      var vid = document.getElementById("bgvid");
+      function vidFade() {
+        vid.classList.add("stopfade");
+      }
+      
+      vid.addEventListener('ended', function() {
+        vid.pause();
+        // to capture IE10
+        vidFade();
+      });
+    </script>
+
+
+
+
+
+img {
+	padding: 16px 48px;
+	max-width: 3.5%;
+	height: auto;
+	width: 100%;
+	display: inline;
+}
