@@ -71,7 +71,6 @@
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
-  border: solid;
 }
 
 #main-img {
@@ -163,4 +162,53 @@ th, td {
     text-align: left;
     width: 20vw;
     height: 35vh;
+}
+
+#blog-nav {
+  margin-top: 1vh;
+}
+
+.blog-category-button {
+  display: inline-block;
+  margin: 15px 2%;
+  font-family: "supplyregular";
+  color: lightgray;
+  text-decoration-color: #981B1E;
+  font-size: 1em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#blog-search {
+  background-color: lightgrey;
+  width: 1.5%;
+  border: solid;
+  border-radius: 15px;
+  display: inline-flex;
+  margin-bottom: 1vh;
+  cursor: text;
+}
+
+.blog-search-items {
+  display: inline;
+  height: 25px;
+  width: auto;
+}
+
+.blog-search-items img {
+  float: right;
+  height: auto;
+  width: auto;
+  max-width: 90%;
+  max-height: 90%;
+  transform:translate(25%, 1px);
+}
+
+#blog-search input {
+  background-color: lightgrey;
+  border: none;
+  display: none;
+  height: 100%;
+  width: 85%;
+  transform:translate(5px,25%);
 }

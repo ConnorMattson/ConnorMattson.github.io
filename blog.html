@@ -1,7 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Home &raquo; Connor Mattson</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113880736-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-113880736-1');
+    </script>
+
+    <title>Blog &raquo; Connor Mattson</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-type"     content="text/html; charset=utf-8" />
@@ -13,7 +23,7 @@
     <meta http-equiv="language"         content="english, en">
     <meta name="page-topic"             content="Webdesign, Development, Graphic Design, Service">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="media/favicon2.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
@@ -33,10 +43,33 @@
 
     <section id="main-section" class="to-fade">
 
+      <section id="blog-nav">
+        <span class="blog-category-button" id="blog-category-ai" onclick="sortBlog('ai')" onmouseover="fadeInBlog('ai')" onmouseout="fadeOutBlog('ai')">AI</span>
+        <span class="blog-category-button" id="blog-category-security" onclick="sortBlog('security')" onmouseover="fadeInBlog('security')" onmouseout="fadeOutBlog('security')">Security</span>
+        <span class="blog-category-button" id="blog-category-operations-research" onclick="sortBlog('operations-research')" onmouseover="fadeInBlog('operations-research')" onmouseout="fadeOutBlog('operations-research')">Operations Research</span>
+        <span class="blog-category-button" id="blog-category-miscellaneous" onclick="sortBlog('miscellaneous')" onmouseover="fadeInBlog('miscellaneous')" onmouseout="fadeOutBlog('miscellaneous')">Miscellaneous</span>
+        <span class="blog-category-button" id="blog-category-clearFilter" onclick="clearFilter()" style="visibility: hidden; color: #981B1E; opacity: 0;">Clear filter</span>
 
+        <div class="blog-category-button" id="blog-search">
+          <input class="blog-search-items" id="blog-search-input" type="text" placeholder="Search"> 
+          <a href="https://www.google.com/search" class="blog-search-items" style="display: flex; justify-content: center;" id="reflectedLink"><img src="media/searchButton.svg"></a>
+        </div>
 
+      </section>
 
-
+      <br>
+      <p class="blog-ai">ai1</p>
+      <p class="blog-ai">ai2</p>
+      <p class="blog-ai">ai3</p>
+      <p class="blog-security">security1</p>
+      <p class="blog-security">security2</p>
+      <p class="blog-security">security3</p>
+      <p class="blog-operations-research">operations-research1</p>
+      <p class="blog-operations-research">operations-research2</p>
+      <p class="blog-operations-research">operations-research3</p>
+      <p class="blog-miscellaneous">miscellaneous1</p>
+      <p class="blog-miscellaneous">miscellaneous2</p>
+      <p class="blog-miscellaneous">miscellaneous3</p>
 
     </section>
   </body>
