@@ -28,16 +28,23 @@
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+      var link = document.getElementById('reflectedLink');
+      var input = document.getElementById('blog-search-input');
+      input.onchange = input.onkeyup= function() {
+        link.search= 'search?q='+encodeURIComponent(input.value);
+        link.firstChild.data= link.href;
+      };
+    </script>
   </head>
 
   <body>
     <nav id="navigation-nav">
-      <a href="index.html"><img src="media/logo400.svg" id="logo-img" class="to-fade"></a>
+      <a href="index.html" class="inside-link"><img src="media/logo400.svg" id="logo-img" class="to-fade"></a>
       <ul id="navigation-ul">
-        <li class="navigation-li"><a href="contact.html">CONTACT</a></li>
-        <li class="navigation-li"><a href="blog.html" class="active-nav">BLOG</a></li>
-        <li class="navigation-li"><a href="projects.html">PROJECTS</a></li>
-        <li class="navigation-li"><a href="about.html">ABOUT</a></li>
+        <li class="navigation-li"><a href="blog.html" class="active-nav" class="inside-link">BLOG</a></li>
+        <li class="navigation-li"><a href="projects.html" class="inside-link">PROJECTS</a></li>
+        <li class="navigation-li"><a href="about.html" class="inside-link">ABOUT</a></li>
       </ul>
     </nav>
 

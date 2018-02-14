@@ -104,11 +104,22 @@
 	line-height: 5px;
 }
 
+.subtitle {
+  font-family: "supplylight";
+  font-size: 25px;
+  color: lightgray;
+  text-decoration: none;
+}
+
+.subtitle:hover {
+  color: black;
+}
+
 .section-wrapper {
   display: flex;
   width: 100%;
   padding-top: 2vh;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
   align-items: center;
 }
 
@@ -132,6 +143,13 @@
 
 .section-proper p {
   margin-left: 20px;
+  font-family: "supplylight";
+  font-size: 0.9em;
+}
+
+.section-proper ul li {
+  font-family: "supplylight";
+  font-size: 0.9em;
 }
 
 .project-item {
@@ -149,7 +167,6 @@
 
 .project-table {
   width: 60vw;
-  margin-top: 5vh;
 }
 
 table, th, td {

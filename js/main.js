@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$('.to-fade').css('display', 'none');
 	$('.to-fade').fadeIn(250);
 
-	$('a').click(function(event) {
+	$('.inside-link').click(function(event) {
 		event.preventDefault();
 		newLocation = this.href;
 		$('.to-fade').fadeOut(250, newpage);
@@ -56,12 +56,13 @@ function sortBlog(sortingCategory) {
 			$('#blog-category-'+catgeories[i]).css('color', 'lightgray')
 		}
 		$('#blog-category-clearFilter').css('visibility', 'visible')
+		$('#blog-category-clearFilter').css('cursor', 'pointer')
 		$('#blog-category-clearFilter').fadeTo(200, 1)
 	}
 
 	// Should the category be added or removed from filters?
 	if (currentlySorted.includes(sortingCategory)) {
-		currentlySorted.pop(sortingCategory)
+		currentlySorted.splice(currentlySorted.indexOf(sortingCategory),1)
 		$('#blog-category-'+sortingCategory).css('color', 'lightgray')
 		
 	}
@@ -88,6 +89,7 @@ function clearFilter() {
 		$('.blog-'+catgeories[i]).fadeIn(250)
 	}
 	$('#blog-category-clearFilter').fadeTo(100, 0)
+	$('#blog-category-clearFilter').css('cursor', 'default')
 }
 
 function fadeInBlog(element) {
@@ -110,9 +112,3 @@ function clearFilterHoverOff() {
 	}
 }
 
-var link= document.getElementById('reflectedLink');
-    var input= document.getElementById('blog-search-input');
-    input.onchange=input.onkeyup= function() {
-        link.search= 'search?q='+encodeURIComponent(input.value);
-        link.firstChild.data= link.href;
-    };
