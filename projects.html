@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
 
   </head>
 
@@ -43,32 +44,53 @@
     <section id="main-section" class="to-fade" style="text-align: center;">
       <a href="https://github.com/ConnorMattson" class="subtitle" style="line-height: 8vh;">github.com/ConnorMattson</a>
       
-      <div style="display: flex; justify-content: center;">     
+      <div class="wrapper">
 
-        
-        <table class="project-table">
-          <tr>
-            <th colspan="2"><!-- <img class="project-image" src="media/projects/project-make placeholder-01-01.jpg"> --></th> <!-- Project Make -->
-            <th colspan="1"><!-- <img class="project-image" src="media/projects/connormattson2-01.png"> --></th> <!-- Connor Mattson -->
-          </tr>
-          <tr>
-            <th rowspan="2"><!-- <img class="project-image" src="media/projects/animation-showreel-2016.jpg"> --></th> <!-- Animation Showreel -->
-            <th colspan="1"><!-- <img class="project-image" src="media/projects/shielded-01.png"> --></th> <!-- Shielded -->
-            <th colspan="1"><!-- <img class="project-image" src="media/projects/asteroids-01.jpg"> --></th> <!-- Asteroids -->
-          </tr>
-          <tr>
-            <th colspan="1"><!-- <img class="project-image" src="media/projects/shielded-01.png"> --></th> <!-- placeholder, who knows what the future brings -->
-            <th colspan="1"><!-- <img class="project-image" src="media/projects/asteroids-01.jpg"> --></th> <!-- placeholder, who knows what the future brings --> 
-          </tr>
+        <div class="project-container a">
+          <img class="project-image" src="media/projects/project-make.svg">
+          <div class="project-overlay" onclick="openModal('project-make')"><div class="inner-overlay">
+            <div class="overlay-text">Project Make</div>
+          </div></div>
+        </div>
+
+        <div class="project-container e">
+          <img class="project-image" src="media/projects/3d-modeling.jpg">
+          <div class="project-overlay" onclick="openModal('3d-modeling')"><div class="inner-overlay">
+              <div class="overlay-text">3D Modeling and Animation</div>
+            </div></div>
+        </div>
+
+        <div class="project-container b">
+          <img class="project-image" src="media/projects/connor-mattson.svg">
+          <div class="project-overlay" onclick="openModal('connor-mattson')"><div class="inner-overlay">
+            <div class="overlay-text">Connor Mattson</div>
+          </div></div>
+        </div>
+
+        <div class="project-container c">
+          <img class="project-image" src="media/projects/asteroids.svg">
+          <div class="project-overlay" onclick="openModal('asteroids-point-control')"><div class="inner-overlay">
+            <div class="overlay-text">Asteroids Point Control</div>
+          </div></div>
+        </div>
+
+        <div class="project-container d">
+          <img class="project-image" src="media/projects/shielded.svg">
+          <div class="project-overlay" onclick="openModal('shielded')"><div class="inner-overlay">
+            <div class="overlay-text">Shielded</div>
+          </div></div>
+        </div>
+      </div> 
 
 
+      <div id="modal">
+        <div class="modal-inner-div">
+          <span class="close-modal" onclick="closeModal()">&times;</span>
+          <iframe id="modal-content">
 
-
-        </table>
+          </iframe>
+        </div>
       </div>
-
-    </section>
-
 
   </body>
 </html>

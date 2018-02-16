@@ -27,15 +27,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
-
-    <script>
-      var link = document.getElementById('reflectedLink');
-      var input = document.getElementById('blog-search-input');
-      input.onchange = input.onkeyup= function() {
-        link.search= 'search?q='+encodeURIComponent(input.value);
-        link.firstChild.data= link.href;
-      };
-    </script>
+    <script src="js/blog.js"></script>
   </head>
 
   <body>
