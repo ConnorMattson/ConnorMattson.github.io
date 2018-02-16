@@ -346,6 +346,7 @@
   display: inline-flex;
   margin-bottom: 1vh;
   cursor: text;
+  float: right;
 }
 
 .blog-search-items {
