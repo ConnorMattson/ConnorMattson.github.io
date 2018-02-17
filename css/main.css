@@ -1,3 +1,5 @@
+/*Copyright Connor Mattson 2018*/
+
 @font-face {
   font-family: supplylight;
   src: url(fonts/supply-light.otf);
@@ -12,11 +14,23 @@
   font-style: normal;
 }
 
+body {
+  margin: 0;
+}
+
+.index-title {
+  font-size: 3vw;
+}
+
+.index-subtitle {
+  font-size: 1.5vw;
+}
+
 #logo-img {
-  padding: 16px 48px;
-  max-width: 3.5%;
+  margin-top: 16px;
+  margin-left: 48px;
   height: auto;
-  width: 100%;
+  width: 3.5%;
   display: inline;
 }
 
@@ -25,8 +39,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  width: 80%;
-  margin-top: 1%;
+  margin-top: 16px;
   float: right;
   display: inline-block;
   padding-bottom: 2%;
@@ -40,9 +53,9 @@
   display: block;
   color: black;
   text-align: center;
-  padding-top: 10px;
-  padding-left: 32px;
-  padding-right: 32px;
+  margin-top: 10px;
+  padding-left: 16px;
+  padding-right: 48px;
   text-decoration: none;
   font-family: "supplyregular";
   font-size: 16pt;
@@ -66,10 +79,27 @@
   height: 75vh;
 }
 
-#main-section {
+.main-section {
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
+}
+
+#project-section {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+
+#github-div {
+  margin: auto;
+  width: 340px;
+}
+
+#index-section {
+  align-items: center;
+  display: flex;
+  margin-top: 15vh;
 }
 
 #main-img {
@@ -80,7 +110,6 @@
 }
 
 #left-section {
-	float: left;
   width: 40vw;
   height: 75vh;
   background-color: lightgray;
@@ -100,7 +129,7 @@
 	font-family: "supplylight";
   vertical-align: middle;
   font-size: 40px;
-	line-height: 5px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -124,8 +153,8 @@
 
 .section-symbol {
   float: left;
-  max-width: 5%;
-  height: 100%
+  width: 5%;
+  height: 100%;
 }
 
 .about-icons {
@@ -138,17 +167,12 @@
   padding-left: 0.5%;
   width: 92%;
   height: 100%;
+  font-family: "supplylight";
+  font-size: 0.9em;
 }
 
 .section-proper p {
   margin-left: 20px;
-  font-family: "supplylight";
-  font-size: 0.9em;
-}
-
-.section-proper ul li {
-  font-family: "supplylight";
-  font-size: 0.9em;
 }
 
 .wrapper {
@@ -248,7 +272,7 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  height: 60%;
+  height: 55vh;
 }
 
 .close-modal {
@@ -281,7 +305,7 @@
 
 .modal-body {
   width: 60%;
-  height: 67%;
+  height: 67vh;
   margin-bottom: 2.5%;
   display: inline-block;
   float: left;
@@ -294,7 +318,7 @@
   display: block;
   float: left;
   width: 8%;
-  padding-right: 2vw;
+  padding-right: 5vw;
   height: 5%;
 }
 
@@ -323,52 +347,143 @@
   margin: auto 0;
 }
 
-#blog-nav {
-  margin-top: 1vh;
+@media only screen and (max-width: 1200px) {
+  #logo-img {
+    margin-top: 16px;
+    margin-left: 48px;
+    height: auto;
+    width: 40px;
+    display: inline;
+  }
 }
 
-.blog-category-button {
-  display: inline-block;
-  margin: 15px 2%;
-  font-family: "supplyregular";
-  color: lightgray;
-  text-decoration-color: #981B1E;
-  font-size: 1em;
-  vertical-align: middle;
-  cursor: pointer;
+@media only screen and (max-width: 750px) {
+  .section-symbol {
+    width: 36px;
+  }
+  .navigation-li a {
+    padding-left: 6%;
+    padding-right: 12%;
+  }
+  .index-title {
+    font-size: 6vw;
+  }
+  .index-subtitle {
+    font-size: 3vw;
+  }
+  #left-section {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    height: 50%;
+    width: 100%;
+  }
+  #right-section {
+    width: 100%;
+    margin: auto;
+    height: 50%;
+  }
+  #index-section {
+    display: block;
+    height: 80vh;
+    margin-top: 25vh;
+  }
+  #main-img-div {
+    height: 80%;
+    margin: auto;
+  }
+  #project-section {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .wrapper {
+    width: 100%;
+  }
+
 }
 
-#blog-search {
-  background-color: lightgrey;
-  width: 1.5%;
-  border: solid;
-  border-radius: 15px;
-  display: inline-flex;
-  margin-bottom: 1vh;
-  cursor: text;
-  float: right;
+@media only screen and (max-width: 536px) {
+  .modal-image {
+    width: 0%;
+  }
+  .modal-body {
+    width: 100%;
+  }
+  .modal-link {
+    width: auto;
+    height: 20px;
+  }
 }
 
-.blog-search-items {
-  display: inline;
-  height: 25px;
-  width: auto;
+@media only screen and (max-width: 460px) {
+  .title {
+    font-size: 1.5em;
+  }
+  .subtitle {
+    font-size: 1.25em;
+  }
+  .section-proper {
+    font-size: 0.75em;
+  }
+  #github-div {
+    width: 270px;
+  }
 }
 
-.blog-search-items img {
-  float: right;
-  height: auto;
-  width: auto;
-  max-width: 90%;
-  max-height: 90%;
-  transform:translate(25%, 1px);
+@media only screen and (max-width: 390px) {
+  .title {
+    font-size: 1.2em;
+  }
+  .subtitle {
+    font-size: 1em;
+  }
+  #navigation-ul {
+    width: 100%;
+  }
+  .navigation-li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5%;
+  }
+  #navigation-nav {
+    align-items: center;
+    display: flex;
+  }
+  
+  #github-div {
+    width: 215px;
+  }
+  #logo-img {
+    margin-left: 40%;
+  }
+  .section-wrapper {
+    display: block;
+  }
+  .section-symbol {
+    float: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+  }
+  .about-icons {
+    width: auto;
+    height: 100%;
+    margin-left: 45%;
+  }
 }
 
-#blog-search input {
-  background-color: lightgrey;
-  border: none;
-  display: none;
-  height: 100%;
-  width: 85%;
-  transform:translate(5px,25%);
+@media only screen and (max-height: 400px) {
+  .modal-body {
+    height: 60vh;
+    margin-bottom: 0;
+  }
+  .modal-image {
+  height: 60%;
+  }
+  .modal-link {
+    margin: 10px;
+  }
 }

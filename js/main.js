@@ -1,3 +1,5 @@
+// Copyright Connor Mattson 2018
+
 $(document).ready(function() {
 	$('.to-fade').css('display', 'none');
 	$('.to-fade').fadeIn(250);

@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Copyright Connor Mattson 2018 -->
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,7 +16,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-type"     content="text/html; charset=utf-8" />
-    <meta name="viewport"               content="width=device-width, initial-scale=1" />
+    <meta name="viewport"               content="width=device-width, initial-scale=1.0" />
     <meta name="author"                 content="Connor Mattson">
     <meta name="copyright"              content="Connor Mattson 2018">
     <meta name="description"            content="I'm an engineer that's interested in AI, security engineering, and operations research.">
@@ -30,7 +31,6 @@
 
     <style>
       html, body { overflow: hidden}
-      #main-section {align-items: center; display: flex;  margin-top: 12vh;}
     </style>
 
   </head>
@@ -39,21 +39,20 @@
 
     <nav id="navigation-nav">
       <ul id="navigation-ul">
-        <li class="navigation-li" onclick="strikethrough('blog-a')" class="blog-a" class=><a href="blog.html" class="inside-link">BLOG</a></li>
         <li class="navigation-li" onclick="strikethrough('.projects-a')" class="projects-a"><a href="projects.html" class="inside-link">PROJECTS</a></li>
         <li class="navigation-li" onclick="strikethrough('.about-a')" class="about-a"><a href="about.html" class="inside-link">ABOUT</a></li>
       </ul>
     </nav>
 
-    <section id="main-section" class="to-fade">
-      <section id="left-section">
+    <section id="index-section" class="main-section to-fade">
+      <div id="left-section">
         <div id="main-img-div"><img src="media/logo400.svg" id="main-img"></div>
-      </section>
+      </div>
 
-      <section id="right-section">
-        <p style="font-size: 3vw;">Connor Mattson</p>
-        <p style="font-size: 1.5vw;"> AI, Security Engineering, Operations Research</p>
-      </section>
+      <div id="right-section">
+        <p class="index-title">Connor Mattson</p>
+        <p class="index-subtitle"> AI, Security Engineering, Operations Research</p>
+      </div>
     </section>
 
     

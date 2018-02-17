@@ -1,3 +1,5 @@
+// Copyright Connor Mattson 2018
+
 $(document).ready(function() {
 	var modal = document.getElementById('modal');
 	var span = document.getElementsByClassName("close-modal")[0];

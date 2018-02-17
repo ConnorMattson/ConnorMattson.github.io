@@ -1,3 +1,5 @@
+// Copyright Connor Mattson 2018
+
 $(document).ready(function() {
 	var link = document.getElementById('reflectedLink');
     var input = document.getElementById('blog-search-input');
