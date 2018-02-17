@@ -362,8 +362,8 @@ body {
     width: 36px;
   }
   .navigation-li a {
-    padding-left: 6%;
-    padding-right: 12%;
+    padding-left: 8px;
+    padding-right: 16px;
   }
   .index-title {
     font-size: 6vw;
@@ -447,6 +447,10 @@ body {
     margin-right: 10px;
     margin-bottom: 5%;
   }
+  .navigation-li a {
+    padding-left: 0;
+    padding-right: 0;
+  }
   #navigation-nav {
     align-items: center;
     display: flex;
@@ -475,9 +479,35 @@ body {
   }
 }
 
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height: 450px) {
   .modal-body {
     height: 60vh;
+    margin-bottom: 0;
+  }
+  .modal-image {
+  height: 60%;
+  }
+  .modal-link {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-height: 360px) {
+  .modal-body {
+    height: 50vh;
+    margin-bottom: 0;
+  }
+  .modal-image {
+  height: 60%;
+  }
+  .modal-link {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-height: 230px) {
+  .modal-body {
+    height: 40vh;
     margin-bottom: 0;
   }
   .modal-image {
