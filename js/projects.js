@@ -12,7 +12,6 @@ $(document).ready(function() {
 function openModal(toDisplay) {
 	$('#modal').css('display', 'block')
 	$('#modal').fadeTo(250, 1)
-	console.log('projects/' + toDisplay + '.html')
 	document.getElementById('modal-content').src = 'projects/' + toDisplay + '.html'
 }
 
