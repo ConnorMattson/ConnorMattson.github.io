@@ -135,7 +135,7 @@ body {
 .subtitle {
   font-family: "supplylight";
   font-size: 25px;
-  color: lightgray;
+  color: darkgrey;
   text-decoration: none;
 }
 
@@ -232,7 +232,7 @@ body {
 }
 
 .overlay-text {
-  font-family: "supplylight";
+  font-family: "supplyregular";
   font-size: 1.5em;
   position: absolute;
   top: 50%;
