@@ -16,6 +16,7 @@
 
 body {
   margin: 0;
+
 }
 
 .index-title {
@@ -419,6 +420,9 @@ td {
   .wrapper {
     width: 100%;
   }
+  .overlay-text {
+    font-size: 1.4em;
+  }
 
 }
 
@@ -432,6 +436,9 @@ td {
   .modal-link {
     width: auto;
     height: 20px;
+  }
+  .overlay-text {
+    font-size: 1.3em;
   }
 }
 
@@ -448,6 +455,10 @@ td {
   #github-div {
     width: 270px;
   }
+  .overlay-text {
+    font-size: 1em;
+  }
+
 }
 
 @media only screen and (max-width: 390px) {
