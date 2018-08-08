@@ -1,19 +1,5 @@
 /*Copyright Connor Mattson 2018*/
 
-@font-face {
-  font-family: supplylight;
-  src: url(fonts/supply-light.otf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: supplyregular;
-  src: url(fonts/supply-regular.otf);
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   margin: 0;
 
@@ -58,7 +44,7 @@ body {
   padding-left: 16px;
   padding-right: 48px;
   text-decoration: none;
-  font-family: "supplyregular";
+  font-family:  Verdana, Geneva, sans-serif;
   font-size: 16pt;
 }
 
@@ -122,19 +108,19 @@ body {
   margin-left: 8vw;
   margin-bottom: 8vh;
 	text-align: center;
-  font-family: "supplylight";
+  font-family:  Verdana, Geneva, sans-serif;
   line-height: 5px;
 }
 
 .title {
-	font-family: "supplylight";
+	font-family:  Verdana, Geneva, sans-serif;
   vertical-align: middle;
   font-size: 40px;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-family: "supplylight";
+  font-family:  Verdana, Geneva, sans-serif;
   font-size: 25px;
   color: darkgrey;
   text-decoration: none;
@@ -168,7 +154,7 @@ body {
   padding-left: 0.5%;
   width: 92%;
   height: 100%;
-  font-family: "supplylight";
+  font-family:  Verdana, Geneva, sans-serif;
   font-size: 0.9em;
 }
 
@@ -252,7 +238,7 @@ td {
 }
 
 .overlay-text {
-  font-family: "supplyregular";
+  font-family:  Verdana, Geneva, sans-serif;
   font-size: 1.5em;
   position: absolute;
   top: 50%;
@@ -318,7 +304,7 @@ td {
 
 .modal-title {
   display: block;
-  font-family: 'supplylight';
+  font-family:  Verdana, Geneva, sans-serif;
   font-size: 1.5em;
   padding-bottom: 5px;
 }
@@ -329,7 +315,7 @@ td {
   margin-bottom: 2.5%;
   display: inline-block;
   float: left;
-  font-family: 'supplylight';
+  font-family:  Verdana, Geneva, sans-serif;
   position: relative;
   overflow-y: auto;
 }
