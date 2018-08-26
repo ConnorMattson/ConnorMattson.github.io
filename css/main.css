@@ -278,6 +278,12 @@ td {
 #modal-text img {
   height: 30px;
   padding-top: 20px;
+  padding-right: 20px;
+}
+
+#modal-text img:hover {
+  height: 35px;
+  padding-top: 15px;
 }
 
 #modal-image {
