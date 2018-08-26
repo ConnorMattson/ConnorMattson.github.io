@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 	$('.to-fade').css('display', 'none');
-	$('.to-fade').fadeIn(250);
+	$('.to-fade').fadeTo(500, 1);
 
 	$('.inside-link').click(function(event) {
 		event.preventDefault();

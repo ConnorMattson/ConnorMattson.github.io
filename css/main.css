@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-
+  font-family:  Verdana, Geneva, sans-serif;
 }
 
 .index-title {
@@ -44,7 +44,6 @@ body {
   padding-left: 16px;
   padding-right: 48px;
   text-decoration: none;
-  font-family:  Verdana, Geneva, sans-serif;
   font-size: 16pt;
 }
 
@@ -108,19 +107,16 @@ body {
   margin-left: 8vw;
   margin-bottom: 8vh;
 	text-align: center;
-  font-family:  Verdana, Geneva, sans-serif;
   line-height: 5px;
 }
 
 .title {
-	font-family:  Verdana, Geneva, sans-serif;
   vertical-align: middle;
   font-size: 40px;
   margin-bottom: 10px;
 }
 
 .subtitle {
-  font-family:  Verdana, Geneva, sans-serif;
   font-size: 25px;
   color: darkgrey;
   text-decoration: none;
@@ -154,7 +150,6 @@ body {
   padding-left: 0.5%;
   width: 92%;
   height: 100%;
-  font-family:  Verdana, Geneva, sans-serif;
   font-size: 0.9em;
 }
 
@@ -171,48 +166,19 @@ td {
   width: 60vw;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr;
-  }
+  grid-auto-flow: row;
+}
 
-  .projectTreeHouse {
-    grid-column: 1 / 4;
-    grid-row: 1;
-    position: relative;
-  }
-  .projectTraceFile {
-    grid-column: 1;
-    grid-row: 2;
-    position: relative;
-  }
-  .projectPM {
-    grid-column: 2 / 4;
-    grid-row: 2;
-    position: relative;
-  }
-  .projectGreedyWalk {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    position: relative;
-  }
-  .projectCM {
-    grid-column: 3;
-    grid-row: 3;
-    position: relative;
-  }
-  .projectAsteroid {
-    grid-column: 1;
-    grid-row: 4;
-    position: relative;
-  }
-  .projectShielded {
-    grid-column: 1;
-    grid-row: 5;
-    position: relative;
-  }
-  .project3D {
-    grid-column: 2 / 4;
-    grid-row: 4 / 6;
-    position: relative;
-  }
+.project-container {
+  position: relative;
+}
+
+.project2 { grid-column: span 2; }
+.project3 { grid-column: span 3; }
+.project2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
 
 .project-image {
   width: 100%;
@@ -238,7 +204,6 @@ td {
 }
 
 .overlay-text {
-  font-family:  Verdana, Geneva, sans-serif;
   font-size: 1.5em;
   position: absolute;
   top: 50%;
@@ -262,14 +227,14 @@ td {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 18vh;
+
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: collapse; 
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
+  opacity: 0;
 }
 
 .modal-inner-div {
@@ -278,79 +243,59 @@ td {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  height: 55vh;
+  max-height: 80vh;
+  overflow: collapse; 
 }
 
-.close-modal {
+#modal-header {
+  display: inline-block;
+  width: 100%;
+  font-size: 26pt;
+}
+
+#modal-title {
+  display: inline-block;
+  margin: 0;
+}
+
+#close-modal {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
   font-weight: bold;
 }
 
-.close-modal:hover,
-.close-modal:focus {
+#close-modal:hover,
+#close-modal:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-#modal-content {
-  border: none;
-  width: 90%;
-  height: 60vh;
-  margin-top: 5vh;
+#modal-text {
+  flex: 1;
 }
 
-.modal-title {
-  display: block;
-  font-family:  Verdana, Geneva, sans-serif;
-  font-size: 1.5em;
-  padding-bottom: 5px;
+#modal-text img {
+  height: 30px;
+  padding-top: 20px;
 }
 
-.modal-body {
-  width: 60%;
-  height: 67vh;
-  margin-bottom: 2.5%;
-  display: inline-block;
-  float: left;
-  font-family:  Verdana, Geneva, sans-serif;
-  position: relative;
-  overflow-y: auto;
+#modal-image {
+  width: 40%;
+  max-height: 100%;
+  margin-left: 20px;
 }
 
-.modal-link {
-  display: block;
-  float: left;
-  width: 8%;
-  padding-right: 5vw;
-  height: 5%;
-}
-
-.modal-link-img {
-  width: 100%;
-  height: 100%;
-}
-
-.modal-image {
-  width: 30%;
-  height: 80%;
-  display: inline-block;
-  position: relative;
+#modal-image img {
   float: right;
-}
-
-.modal-image img {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   max-width: 100%;
   max-height: 100%;
-  width: auto;
-  height: auto;
-  float: right;
-  margin: auto 0;
+}
+
+#modal-div {
+  display: flex;
+  overflow-y:scroll;
+  max-height: 70vh;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -360,6 +305,10 @@ td {
     height: auto;
     width: 40px;
     display: inline;
+  }
+
+  #modal-header {
+    font-size: 20pt;
   }
 }
 
@@ -406,23 +355,21 @@ td {
   .wrapper {
     width: 100%;
   }
+  
   .overlay-text {
     font-size: 1.4em;
   }
 
+  #modal-header {
+    font-size: 15pt;
+  }
+
+  #modal-image {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 536px) {
-  .modal-image {
-    width: 0%;
-  }
-  .modal-body {
-    width: 100%;
-  }
-  .modal-link {
-    width: auto;
-    height: 20px;
-  }
   .overlay-text {
     font-size: 1.3em;
   }
@@ -443,6 +390,12 @@ td {
   }
   .overlay-text {
     font-size: 1em;
+  }
+  #modal-header {
+    font-size: 13pt;
+  }
+  #modal-text {
+    font-size: 10pt;
   }
 
 }
@@ -492,44 +445,5 @@ td {
     width: auto;
     height: 100%;
     margin-left: 45%;
-  }
-}
-
-@media only screen and (max-height: 450px) {
-  .modal-body {
-    height: 60vh;
-    margin-bottom: 0;
-  }
-  .modal-image {
-  height: 60%;
-  }
-  .modal-link {
-    margin: 10px;
-  }
-}
-
-@media only screen and (max-height: 360px) {
-  .modal-body {
-    height: 50vh;
-    margin-bottom: 0;
-  }
-  .modal-image {
-  height: 60%;
-  }
-  .modal-link {
-    margin: 10px;
-  }
-}
-
-@media only screen and (max-height: 230px) {
-  .modal-body {
-    height: 40vh;
-    margin-bottom: 0;
-  }
-  .modal-image {
-  height: 60%;
-  }
-  .modal-link {
-    margin: 10px;
   }
 }
