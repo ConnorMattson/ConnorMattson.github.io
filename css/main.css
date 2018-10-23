@@ -341,7 +341,7 @@ td {
 }
 
 #problemTable tr:hover {
-  background-color: #D7E5FF;
+  background-color: lightgray;
 }
 
 @media only screen and (max-width: 1200px) {
