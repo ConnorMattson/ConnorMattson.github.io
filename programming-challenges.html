@@ -10,9 +10,14 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-113880736-1');
+
+      
+      document.addEventListener("DOMContentLoaded", function(event) {
+        window.onload = loadData();
+      });
     </script>
 
-    <title>Home &raquo; Connor Mattson</title>
+    <title>Problem Solutions and Random Scripts</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-type"     content="text/html; charset=utf-8" />
@@ -29,34 +34,30 @@
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
 
-    <style>
-      html, body { overflow: hidden}
-    </style>
-
   </head>
 
   <body>
 
     <nav id="navigation-nav">
+      <a href="https://connormattson.github.io"><img src="media/logo400.svg" id="logo-img" class="to-fade"></a>
       <ul id="navigation-ul">
-        <li class="navigation-li" onclick="strikethrough('.about-a')" class="about-a"><a href="programming-challenges" class="inside-link">PROBLEMS</a></li>
-        <li class="navigation-li" onclick="strikethrough('.projects-a')" class="projects-a"><a href="projects" class="inside-link">PROJECTS</a></li>
-        <li class="navigation-li" onclick="strikethrough('.about-a')" class="about-a"><a href="about" class="inside-link">ABOUT</a></li>
+        <li class="navigation-li"><a href="programming-challenges" class="active-nav" class="inside-link">PROBLEMS</a></li>
+        <li class="navigation-li"><a href="projects" class="inside-link">PROJECTS</a></li>
+        <li class="navigation-li"><a href="about" class="inside-link">ABOUT</a></li>
       </ul>
     </nav>
 
-    <section id="index-section" class="main-section to-fade">
-      <div id="left-section">
-        <div id="main-img-div"><img src="media/logo400.svg" id="main-img"></div>
+    <section id="main-section" class="to-fade">
+      <div id="problemSearch">
+        Search: <input type="text" id="filter" oninput="filterDownloads()"/><br>
+        Point value:  3<input type="checkbox" id="3" onclick="filterDownloads()" checked>
+                      10<input type="checkbox" id="10" onclick="filterDownloads()" checked>
+                      30<input type="checkbox" id="30" onclick="filterDownloads()" checked>
+                      100<input type="checkbox" id="100" onclick="filterDownloads()" checked>
       </div>
-
-      <div id="right-section">
-        <p class="index-title">Connor Mattson</p>
-        <p class="index-subtitle"> Data Science &nbsp;&nbsp; Operations Research &nbsp;&nbsp; Software Development</p>
-      </div>
+      <table id="problemTable">
+      </table>
     </section>
-
-    
 
   </body>
 </html>

@@ -10,6 +10,14 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-113880736-1');
+
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var modal = document.getElementById('modal');
+        var span = document.getElementsByClassName("close-modal")[0];
+
+        window.onclick = function(event) { if (event.target == modal) closeModal(); }
+      });
     </script>
 
     <title>Projects &raquo; Connor Mattson</title>
@@ -28,7 +36,6 @@
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/projects.js"></script>
 
   </head>
 
@@ -36,6 +43,7 @@
     <nav id="navigation-nav">
       <a href="https://connormattson.github.io"><img src="media/logo400.svg" id="logo-img" class="to-fade"></a>
       <ul id="navigation-ul">
+        <li class="navigation-li"><a href="programming-challenges" class="inside-link">PROBLEMS</a></li>
         <li class="navigation-li"><a href="projects" class="active-nav" class="inside-link">PROJECTS</a></li>
         <li class="navigation-li"><a href="about" class="inside-link">ABOUT</a></li>
       </ul>
