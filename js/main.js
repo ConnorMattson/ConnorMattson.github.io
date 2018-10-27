@@ -54,7 +54,7 @@ function closeModal() {
   setTimeout(function() { $('#modal').css('display', 'none') }, 250)
 }
 
-function filterDownloads() {
+function filterProblems() {
   let filter = document.getElementById("filter").value;
   let tableContents = "<tr><th> Filename </th><th> Problem Source </th><th> Problem </th><th> Points </th><th> Source code </th><th> Try me! </th></tr>\n";
   let github = "https://github.com/ConnorMattson/Misc-Scripts-and-Challenge-Solutions/blob/master";
@@ -80,8 +80,8 @@ function loadData() {
   xhr.open("GET", "https://connormattson.github.io/Misc-Scripts-and-Challenge-Solutions/problemData.json", true);
 
   xhr.onreadystatechange  = (function(response) {
-    data = JSON.parse(xhr.responseText);
-    filterDownloads("")
+    data = JSON.parse(xhr.responseText).reverse();
+    filterProblems("")
   });
 
   xhr.send(null);
