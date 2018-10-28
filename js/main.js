@@ -62,6 +62,7 @@ function filterProblems() {
   let allowedPoints = [];
   pointValues.forEach((element) => { if (document.getElementById(element).checked) allowedPoints.push(element) });
 
+  let count = 0 // Used to count the number of elements after it has been filtered
   data.filter((element) => (element.filename.includes(filter) || element.problem.includes(filter)) && (allowedPoints.indexOf(element.points) > -1)) 
       .forEach(function(element) {
         tableContents += "<tr><td>" + element.filename + "</td>";
@@ -70,8 +71,10 @@ function filterProblems() {
         tableContents += "<td>" + element.points + "</td>";
         tableContents += "<td><a href='" + github + element.githubLink + "'><img src='https://connormattson.github.io/media/projects/GitHub.svg'></a></td>";
         tableContents += "<td> Coming soon... </td></tr>";
+        count += 1;
       });
   document.getElementById("problemTable").innerHTML = tableContents;
+  document.getElementById("howManyProblems").innerHTML = "There are " + data.length + " problems in the database. " + count + " are being displayed.";
 }
 
 function loadData() {
@@ -79,7 +82,7 @@ function loadData() {
   const xhr = new XMLHttpRequest();
   xhr.open("GET", "https://connormattson.github.io/Misc-Scripts-and-Challenge-Solutions/problemData.json", true);
 
-  xhr.onreadystatechange  = (function(response) {
+  xhr.onload  = (function(response) {
     data = JSON.parse(xhr.responseText).reverse();
     filterProblems("")
   });
