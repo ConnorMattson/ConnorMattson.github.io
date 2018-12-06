@@ -56,7 +56,7 @@ function closeModal() {
 
 function filterProblems() {
   let filter = document.getElementById("filter").value;
-  let tableContents = "<tr><th> Filename </th><th> Problem Source </th><th> Problem </th><th> Points </th><th> Source code </th><th> Try me! </th></tr>\n";
+  let tableContents = "<tr class='largeScreenTable'><th> Filename </th><th> Problem Source </th><th> Problem </th><th> Points </th><th> My Solution </th></tr>\n";
   let github = "https://github.com/ConnorMattson/Misc-Scripts-and-Challenge-Solutions/blob/master";
   let pointValues = ["3", "10", "30", "100"];
   let allowedPoints = [];
@@ -65,12 +65,14 @@ function filterProblems() {
   let count = 0 // Used to count the number of elements after it has been filtered
   data.filter((element) => (element.filename.includes(filter) || element.problem.includes(filter)) && (allowedPoints.indexOf(element.points) > -1)) 
       .forEach(function(element) {
-        tableContents += "<tr><td>" + element.filename + "</td>";
+        tableContents += "<tr class='largeScreenTable'><td>" + element.filename + "</td>";
         tableContents += "<td><a href='" + element.problemLink + "'>" + element.problemSource + "</a></td>";
         tableContents += "<td>" + element.problem + "</td>";
         tableContents += "<td>" + element.points + "</td>";
-        tableContents += "<td><a href='" + github + element.githubLink + "'><img src='https://connormattson.github.io/media/projects/GitHub.svg'></a></td>";
-        tableContents += "<td> Coming soon... </td></tr>";
+        tableContents += "<td><a href='" + github + element.githubLink + "'><img src='https://connormattson.github.io/media/projects/GitHub.svg'></a></td></tr>";
+
+        tableContents += "<tr class='smallScreenTable'><td>" + element.filename + " - (" + element.points + ") points<br/>" + element.problem + "<br/>";
+        tableContents += " <a href='" + github + element.githubLink + "'><img src='https://connormattson.github.io/media/projects/GitHub.svg'></a></td></tr>";
         count += 1;
       });
   document.getElementById("problemTable").innerHTML = tableContents;

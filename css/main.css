@@ -344,9 +344,13 @@ td {
   background-color: lightgray;
 }
 
+.smallScreenTable {
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
   #logo-img {
-    margin-top: 16px;
+    margin-top: 20px;
     margin-left: 48px;
     height: auto;
     width: 40px;
@@ -355,6 +359,18 @@ td {
 
   #modal-header {
     font-size: 20pt;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .largeScreenTable {
+    display: none;
+  }
+  .smallScreenTable {
+    display: table-row;
+  }
+  th {
+    column-span: 1;
   }
 }
 
@@ -421,7 +437,7 @@ td {
   }
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 470px) {
   .title {
     font-size: 1.5em;
   }
@@ -442,6 +458,10 @@ td {
   }
   #modal-text {
     font-size: 10pt;
+  }
+  #logo-img {
+    margin-top: 20px;
+    margin-left: 24px;
   }
 
 }
