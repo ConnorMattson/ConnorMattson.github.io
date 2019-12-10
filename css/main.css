@@ -5,6 +5,11 @@ body {
   font-family:  Verdana, Geneva, sans-serif;
 }
 
+#about {
+  margin: auto;
+  width: 60vw;
+}
+
 .index-title {
   font-size: 3vw;
 }
@@ -254,7 +259,7 @@ td {
   border: 1px solid #888;
   width: 80%;
   max-height: 80vh;
-  overflow: collapse; 
+  overflow: collapse;
 }
 
 #modal-header {
@@ -318,7 +323,7 @@ td {
   text-align: center;
   padding: 20px;
 }
-      
+
 #problemTable img {
   max-height: 20px;
 }
@@ -417,7 +422,7 @@ td {
   .wrapper {
     width: 100%;
   }
-  
+
   .overlay-text {
     font-size: 1.4em;
   }
@@ -435,9 +440,18 @@ td {
   .overlay-text {
     font-size: 1.3em;
   }
+
+  #about {
+    margin: auto;
+    width: 80vw;
+  }
 }
 
 @media only screen and (max-width: 470px) {
+  #about {
+    margin: auto;
+    width: 95vw;
+  }
   .title {
     font-size: 1.5em;
   }
@@ -490,7 +504,7 @@ td {
     align-items: center;
     display: flex;
   }
-  
+
   #github-div {
     width: 215px;
   }
